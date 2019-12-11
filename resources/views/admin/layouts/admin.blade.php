@@ -78,6 +78,15 @@
                 <li class="list-group-item"><a href="{{ route('admin_videos_create') }}">Добавить видео</a></li>
             </ul>
 
+            <h4>Ссылки</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="{{ route('admin_links_index') }}">Ссылки</a>
+                </li>
+                <li class="list-group-item"><a href="{{ route('admin_links_create') }}">Добавить ссылку</a></li>
+            </ul>
+
+
 
 
         </aside>

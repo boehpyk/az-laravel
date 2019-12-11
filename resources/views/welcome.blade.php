@@ -12,11 +12,12 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Zero People" />
     <meta property="og:description" content="Zero People - сайд-проект музыкантов Animal ДжаZ Александра Красовицкого и Александра Заранкина" />
     <meta property="og:url" content="https://zeropeople.ru/" />
     <meta property="og:image" content="https://zeropeople.ru/assets/zeropeople.jpg" />
+    <meta property="vk:image" content="https://zeropeople.ru/assets/zeropeople.jpg" />
 </head>
 
 <body>
@@ -135,6 +136,23 @@
                     frameborder="0"
             ></iframe>
         @endforeach
+    @endif
+
+    @if (count($links) > 0)
+        <section class="links">
+        @foreach($links as $link)
+            <article class="links-item">
+                <a target="_blank" href="{{ $link->link }}" class="image">
+                    <img src="{{ asset('storage/LinkImages/'.$link->id.'/cover.jpg') }}" alt="" class="">
+                </a>
+                <a target="_blank" href="{{ $link->link }}" class="button">
+                    {{ $link->linktext }}
+                </a>
+            </article>
+        @endforeach
+
+        </section>
+
     @endif
 
 

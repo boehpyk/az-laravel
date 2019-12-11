@@ -39,6 +39,16 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     Route::post('/videos', 'VideoController@update')->name('admin_videos_update');
     Route::get('/videos/create', 'VideoController@create')->name('admin_videos_create');
     Route::post('/videos/create', 'VideoController@store')->name('admin_videos_store');
+    /**
+    links
+     */
+    Route::get('/links', 'LinkController@index')->name('admin_links_index');
+    Route::get('/links/create', 'LinkController@create')->name('admin_links_create');
+    Route::post('/links/create', 'LinkController@store')->name('admin_links_store');
+    Route::get('/links/{link}/edit', 'LinkController@edit')->where('id', '[0-9]+')->name('admin_links_edit');
+    Route::post('/links/{link}/edit', 'LinkController@update')->where('id', '[0-9]+')->name('admin_links_update');
+    Route::post('/links/{link}/delete', 'LinkController@destroy')->where('id', '[0-9]+')->name('admin_links_delete');
+
     
 });
 

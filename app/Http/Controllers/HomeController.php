@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Link;
 use Illuminate\Http\Request;
 use App\Widget;
 use App\Video;
@@ -54,6 +55,10 @@ class HomeController extends Controller
             ->where('is_publish', 'yes')
             ->orderBy('date_begin', 'asc')
             ->get();
+
+        $data['links'] = Link::select('id', 'link', 'linktext')
+            ->where('is_publish', 'yes')
+            ->orderBy('id', 'asc')->get();
 
 
         return view('welcome', $data);
