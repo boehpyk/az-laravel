@@ -108,6 +108,11 @@ h3 {
   text-decoration: none;
 }
 
+.logo {
+  max-width: 300px;
+  margin-top: 15px;
+}
+
 .social-networks {
   position: -webkit-sticky;
   position: sticky;

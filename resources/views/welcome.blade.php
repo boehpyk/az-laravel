@@ -23,7 +23,7 @@
 <body>
 <header class="header">
     <div class="container">
-        <h1>Zero People</h1>
+        <img src="{{asset('assets/zp-logo.png') }}" border="0" class="logo" />
     </div>
 </header>
 
