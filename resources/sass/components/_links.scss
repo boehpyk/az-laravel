@@ -12,7 +12,11 @@
 .links-item {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+    min-width: 420px;
     text-align: center;
+    @media only screen and (max-width: 800px) {
+        margin-bottom: 20px;
+    }
     .button {
         display: block;
         width: 240px;
