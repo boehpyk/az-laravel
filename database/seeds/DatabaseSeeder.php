@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'ZP admin',
             'email' => 'zarankin@bk.ru',
             'type'  => 'supaBoss',
-            'password' => bcrypt('qwertyhuerty'),
+            'password' => bcrypt('secretsecret'),
         ]);
 
 //        DB::table('widgets')->insert([
