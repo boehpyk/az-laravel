@@ -1,5 +1,5 @@
 .top-links {
-    background-color: #a8a8a2;
+    background-color: #000000;
     justify-content: center;
     margin-bottom: 4px;
     .top-links__container {
@@ -13,10 +13,10 @@
         list-style: none;
     }
     .top-link {
-        color: #000000;
-        font-size: 1.6rem;
+        color: #ffffff;
+        font-size: 2.2rem;
+        font-weight: bold;
         text-decoration: none;
-        text-shadow: #999999 1px 1px 2px;
         &:hover {
             text-decoration: underline;
         }

@@ -128,7 +128,7 @@ h3 {
 }
 
 .top-links {
-  background-color: #a8a8a2;
+  background-color: #000000;
   -webkit-box-pack: center;
           justify-content: center;
   margin-bottom: 4px;
@@ -149,10 +149,10 @@ h3 {
 }
 
 .top-links .top-link {
-  color: #000000;
-  font-size: 1.6rem;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bold;
   text-decoration: none;
-  text-shadow: #999999 1px 1px 2px;
 }
 
 .top-links .top-link:hover {
