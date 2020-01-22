@@ -1,5 +1,5 @@
 .top-links {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.86);
     justify-content: center;
     margin-bottom: 4px;
     .top-links__container {
@@ -11,11 +11,16 @@
         margin: auto;
         //max-width: var(--maxViewport);
         list-style: none;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            height: auto;
+            font-size: 1.7rem;
+        }
     }
     .top-link {
         color: #ffffff;
-        font-size: 2.2rem;
-        font-weight: bold;
         text-decoration: none;
         &:hover {
             text-decoration: underline;

@@ -128,7 +128,7 @@ h3 {
 }
 
 .top-links {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.86);
   -webkit-box-pack: center;
           justify-content: center;
   margin-bottom: 4px;
@@ -145,12 +145,20 @@ h3 {
   padding: 16px var(--containerPadding);
   margin: auto;
   list-style: none;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .top-links .top-links__container {
+    height: auto;
+    font-size: 1.7rem;
+  }
 }
 
 .top-links .top-link {
   color: #ffffff;
-  font-size: 2.2rem;
-  font-weight: bold;
   text-decoration: none;
 }
 
