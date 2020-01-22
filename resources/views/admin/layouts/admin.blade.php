@@ -71,20 +71,29 @@
             </ul>
 
             <h4>Видео</h4>
-            <ul class="list-group">
+            <ul class="list-group mb-3">
                 <li class="list-group-item">
                     <a href="{{ route('admin_videos_index') }}">Видео</a>
                 </li>
                 <li class="list-group-item"><a href="{{ route('admin_videos_create') }}">Добавить видео</a></li>
             </ul>
 
-            <h4>Ссылки</h4>
-            <ul class="list-group">
+            <h4>Ссылки внизу с картинками</h4>
+            <ul class="list-group mb-3">
                 <li class="list-group-item">
-                    <a href="{{ route('admin_links_index') }}">Ссылки</a>
+                    <a href="{{ route('admin_links_index') }}">Список</a>
                 </li>
                 <li class="list-group-item"><a href="{{ route('admin_links_create') }}">Добавить ссылку</a></li>
             </ul>
+
+            <h4>Текстовые ссылки наверху</h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">
+                    <a href="{{ route('admin_text_links_index') }}">Список</a>
+                </li>
+                <li class="list-group-item"><a href="{{ route('admin_text_links_create') }}">Добавить ссылку</a></li>
+            </ul>
+
 
 
 

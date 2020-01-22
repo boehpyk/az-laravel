@@ -26,6 +26,19 @@
         <img src="{{asset('assets/zp-logo.png') }}" border="0" class="logo" />
     </div>
 </header>
+@if (count($textlinks) > 0)
+<section class="top-links">
+    <ul class="top-links__container">
+    @foreach($textlinks as $textlink)
+        <li>
+            <a class="top-link" target="_blank" href="{{ $textlink->link }}" role="listitem" title="{{ $textlink->linktext }}">
+                {{ $textlink->linktext }}
+            </a>
+        </li>
+    @endforeach
+    </ul>
+</section>
+@endif
 
 <nav class="social-networks">
     <ul class="social-networks__container">

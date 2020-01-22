@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Link;
+use App\TextLink;
 use Illuminate\Http\Request;
 use App\Widget;
 use App\Video;
 use App\Event;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -59,6 +61,13 @@ class HomeController extends Controller
         $data['links'] = Link::select('id', 'link', 'linktext')
             ->where('is_publish', 'yes')
             ->orderBy('id', 'asc')->get();
+
+        $data['textlinks'] = TextLink::select('id', 'link', 'linktext')
+            ->where('is_publish', 'yes')
+            ->inRandomOrder()
+            ->limit(1)->get();
+//            ->orderBy(DB::raw('RAND()'))->get();
+
 
 
         return view('welcome', $data);

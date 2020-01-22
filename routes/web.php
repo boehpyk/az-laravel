@@ -49,6 +49,17 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     Route::post('/links/{link}/edit', 'LinkController@update')->where('id', '[0-9]+')->name('admin_links_update');
     Route::post('/links/{link}/delete', 'LinkController@destroy')->where('id', '[0-9]+')->name('admin_links_delete');
 
+    /**
+    text links
+     */
+    Route::get('/text_links', 'TextLinkController@index')->name('admin_text_links_index');
+    Route::get('/text_links/create', 'TextLinkController@create')->name('admin_text_links_create');
+    Route::post('/text_links/create', 'TextLinkController@store')->name('admin_text_links_store');
+    Route::get('/text_links/{text_link}/edit', 'TextLinkController@edit')->where('id', '[0-9]+')->name('admin_text_links_edit');
+    Route::post('/text_links/{text_link}/edit', 'TextLinkController@update')->where('id', '[0-9]+')->name('admin_text_links_update');
+    Route::post('/text_links/{text_link}/delete', 'TextLinkController@destroy')->where('id', '[0-9]+')->name('admin_text_links_delete');
+    
+
     
 });
 
