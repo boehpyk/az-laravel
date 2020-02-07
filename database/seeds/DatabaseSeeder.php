@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'ZP admin',
             'email' => 'info@zeropeople.ru',
             'type'  => 'boss',
-            'password' => bcrypt('secretsecret'),
+            'password' => bcrypt(''),
         ]);
 
 //        DB::table('widgets')->insert([
