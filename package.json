@@ -34,7 +34,6 @@
     "dependencies": {
         "@chenfengyuan/datepicker": "^1.0.9",
         "postscribe": "^2.0.8",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0"
+        "material-components-web": "^0.31.0"
     }
 }

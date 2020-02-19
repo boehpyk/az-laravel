@@ -104,7 +104,7 @@ eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/programmer/Work/Sites/zp-laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/programmer/Work/Sites/az-laravel/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

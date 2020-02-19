@@ -37,4 +37,17 @@ class Event extends Model
      */
     protected $dates = ['date_begin', 'date_end'];
 
+    /**
+     * gets russian month of given date
+     * @param $value
+     * @return string
+     */
+    public function getDateBeginRussianMonthAttribute()
+    {
+        $months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+        $month_num = (\Carbon\Carbon::parse($this->date_begin)->format('n') - 1);
+
+        return $months[$month_num];
+    }
+
 }

@@ -1,0 +1,36 @@
+*,
+a {
+  outline: none;
+  font-weight: inherit;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.hidden-xs-down {
+  @include media-breakpoint-down(xs) {
+    display: none !important;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.linear-bgr {
+  background: linear-gradient(to right, $app-color-gradient-left, $app-color-gradient-right);
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.height-10 {
+  height: 10px;
+}
+.height-20 {
+  height: 20px;
+}

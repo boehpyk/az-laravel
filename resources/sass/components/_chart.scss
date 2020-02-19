@@ -1,0 +1,44 @@
+$img-height: 240px;
+
+.chart {
+  &__column {
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
+      margin: 15px 0;
+    }
+  }
+
+  &__img {
+    height: $img-height;
+
+    &_mb {
+      display: flex;
+      align-items: center;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    //font-size: inherit;
+  }
+}
+
+.itunes-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  .itunes-buttons__link + .itunes-buttons__link {
+    margin-left: 15px;
+  }
+}
+
+.item {
+  &_last {
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,17 @@
+$font-size-base: 1.2rem;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$app-color-black: #000;
+$app-color-white: #fff;
+$app-color-grey: #ddd;
+$app-color-grey-light: #eee;
+$app-color-grey-rgba: rgba(0, 0, 0, .7);
+$app-color-grey-light-rgba: rgba(0, 0, 0, .26);
+$app-color-gradient-left: rgba(255, 62, 87, 1);
+$app-color-gradient-right: rgba(255, 93, 98, 1);
+
+$app-transition: all .5s;
+
+$mdc-theme-primary: #212121;

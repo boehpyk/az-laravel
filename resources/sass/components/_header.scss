@@ -1,12 +1,326 @@
-.logo {
-    max-width: 280px;
-    margin-top: 10px;
-    @media only screen and (max-width: 800px) {
-        max-width: 200px;
-        margin-top: 5px;
+.header-section {
+  padding: 0 0 0 0;
+
+  color: $app-color-black;
+
+  font-family: Qanelas, Roboto, sans-serif;
+
+  line-height: 1.1;
+
+  &__container {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      img {
+          max-width: 100%;
+          height: auto;
+          &.logo {
+              display: block;
+              width: 80%;
+              margin: 0 auto;
+          }
+      }
+  }
+
+    &__main-photo {
+        text-align: center;
+        margin-top: 4%;
+        @media (max-width: 768px) {
+            margin-top: 10px;
+        }
     }
-    @media only screen and (max-width: 500px) {
-        max-width: 150px;
-        margin-top: 5px;
+
+    &__row {
+    position: relative;
+    z-index: 110;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding-top: 50px;
+    padding-right: 0;
+    padding-left: 0;
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    };
+    }
+
+    &__logo {
+      position: absolute;
+      top: -4%;
+      left: 0;
+      width: 100%;
+        @media (max-width: 768px) {
+            top: -10px;
+        }
+    }
+
+    &__buttons {
+        display: block;
+        width: 100%;
+        position: relative;
+        padding-top: 23px;
+    }
+
+    &__concerts {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: 768px) {
+            display: block;
+            margin-top: 30px;
+        }
+        .concert-item {
+            width: 40%;
+            flex: 1 1 40%;
+            color: $app-color-white;
+            padding: 4% 1% 1% 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @media (max-width: 1380px) {
+                background-size: 100% 100%;
+            }
+            @media (max-width: 768px) {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                background-size: 100% 100%;
+            }
+
+            &.left {
+                background-image: url('../assets/autumn-site/bgr-concert-left.jpg');
+                background-position: left top;
+                @media (max-width: 768px) {
+                    background-image: url('../assets/autumn-site/bgr-concert-left-sm.jpg');
+                }
+            }
+            &.right {
+                background-image: url('../assets/autumn-site/bgr-concert-right.jpg');
+                background-position: right top;
+                text-align: right;
+                @media (max-width: 768px) {
+                    background-image: url('../assets/autumn-site/bgr-concert-right-sm.jpg');
+                }
+                .concert-item-container {
+                    @media (min-width: 769px) {
+                        float: right;
+                    }
+                }
+            }
+            .date {
+                font-size: 4vw;
+                font-weight: 500;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .date-sm {
+                display: none;
+                font-size: 36px;
+                font-weight: 500;
+                text-transform: uppercase;
+                @media (max-width: 768px) {
+                    display: block;
+                }
+                @media (max-width: 420px) {
+                    font-size: 26px;
+                }
+            }
+            .place {
+                margin-top: 20px;
+                font-size: 1.9vw;
+                text-transform: uppercase;
+                @media (max-width: 768px) {
+                    margin: 10px 0 10px 0;
+                    font-size: 20px;
+                }
+            }
+            .tickets {
+                display: inline-block;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: $app-color-white;
+                color: $app-color-black;
+                font-size: 2vw;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-decoration: none;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+
+            }
+            .tickets-sm {
+                display: none;
+                position: relative;
+                margin-left: 20px;
+                padding: 10px 20px;
+                color: $app-color-white;
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                @media (max-width: 768px) {
+                    display: block;
+                }
+                @media (max-width: 420px) {
+                    font-size: 20px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -7px;
+                    left: -12px;
+                    bottom: 0;
+                    right: -16px;
+                    border: solid 5px $app-color-white;
+                    transform: rotate(2deg);
+                    transform-origin: 0 0;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -4px;
+                    left: -8px;
+                    bottom: 0;
+                    right: -8px;
+                    border: solid 5px $app-color-black;
+                }
+            }
+        }
+        .concert-item-container {
+            width: 21vw;
+            text-align: center;
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+        }
+        .space {
+            width: 30%;
+            flex: 1 1 30%;
+        }
+        .concerts-title {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            right: 0;
+            padding-top: 8px;
+            @media (max-width: 768px) {
+                position: static;
+                margin-top: -50px;
+            }
+            .title-container {
+                width: 40%;
+                text-align: center;
+                margin: 0 auto;
+                @media (max-width: 768px) {
+                    width: 80%;
+                    margin: 15px auto 10px auto;
+                }
+            }
+            .time-to-love {
+                display: inline-block;
+                padding: 25px;
+                position: relative;
+                font-size: 2.8vw;
+                text-transform: uppercase;
+                font-weight: bold;
+                @media (max-width: 768px) {
+                    font-size: 24px;
+                    padding: 10px 20px 15px 5px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: -22px;
+                    bottom: 0;
+                    right: 8px;
+                    border: solid 10px #722452;
+                    transform: rotate(1.5deg);
+                    transform-origin: 0 0;
+                    @media (max-width: 768px) {
+                        border: solid 6px #722452;
+                    }
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: -14px;
+                    bottom: 0;
+                    right: 0;
+                    border: solid 10px $app-color-black;
+                    @media (max-width: 768px) {
+                        border: solid 6px $app-color-black;
+                    }
+                }
+                .shadow {
+                    position: absolute;
+                    top: -18px;
+                    left: 0;
+                    width: 100%;
+                    height: 8px;
+                    background: url('../assets/autumn-site/timetolove-bgr.jpg') center top no-repeat;
+                    background-size: 98% auto;
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+                }
+            }
+            .best {
+                display: inline-block;
+                margin-top: 30px;
+                padding: 12px 45px;
+                position: relative;
+                font-size: 2vw;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: $app-color-white;
+                background-color: #722452;
+                @media (max-width: 768px) {
+                    font-size: 26px;
+                    padding: 7px 40px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    &__spacer {
+        width: 100%;
+    }
+    &__top-links {
+        background-color: rgba(0, 0, 0, 0.86);
+        justify-content: center;
+        margin: 0 0 8px 0;
+        font-family: Qanelas, Roboto, sans-serif;
+        .top-links__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 0 10px 0;
+            margin: auto;
+            //max-width: var(--maxViewport);
+            list-style: none;
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                height: auto;
+                font-size: 1.7rem;
+            }
+        }
+        .top-link {
+            color: #ffffff;
+            //text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

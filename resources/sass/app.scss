@@ -1,11 +1,123 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import 'common';
+@import "variables";
+@import "fonts";
+@import "transitions";
 
-@import "components/header";
-@import '/components/top-links';
-@import './components/social-networks';
-@import './components/concerts';
-@import './components/widget';
-@import './components/links';
 
+body,
+html {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  &.-overflow-visible {
+    overflow: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+.justerest-modal {
+  /* packages */
+  @import "~@material/button/mdc-button";
+  @import "~@material/card/mdc-card";
+  @import "~@material/list/mdc-list";
+  @import "~@material/ripple/mdc-ripple";
+  @import "~@material/typography/mdc-typography";
+  @import "~bootstrap/scss/bootstrap-grid";
+
+  /* Utils */
+  @import "globals";
+
+  /* Components */
+  @import "components/header";
+  @import "components/navbar";
+  @import "components/tours";
+  @import "components/youtube-video";
+  @import "components/contacts";
+  @import "components/chart";
+  @import "components/footer";
+
+  /* Fonts */
+  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
+  @import url("https://fonts.googleapis.com/css?family=Rubik&subset=cyrillic");
+  @import url("https://fonts.googleapis.com/css?family=Cuprum&subset=cyrillic");
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  background-color: $app-color-white;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: $app-color-black;
+  z-index: 777;
+
+  &--hidden {
+    visibility: hidden;
+    transition: $app-transition;
+    opacity: 0;
+  }
+
+  .main-section {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 60px;
+  }
+
+  .closer {
+    &__btn {
+      position: absolute;
+      z-index: 10;
+      top: 15px;
+      right: 15px;
+      border-radius: 50%;
+      background-color: $app-color-grey;
+      cursor: pointer;
+      transition: $app-transition;
+      @include media-breakpoint-down(sm) {
+        top: 5px;
+        right: 5px;
+      }
+
+      &:hover {
+        color: $app-color-white;
+      }
+    }
+
+    &__icon {
+      @include media-breakpoint-down(sm) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+}
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/assets/fonts/qanelas-regular-webfont.woff2') format('woff2'),
+  url('/assets/fonts/qanelas-regular-webfont.woff') format('woff'),
+  url('/assets/fonts/qanelas-regular-webfont.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/assets/fonts/qanelas-bold-webfont.woff2') format('woff2'),
+  url('/assets/fonts/qanelas-bold-webfont.woff') format('woff'),
+  url('/assets/fonts/qanelas-bold-webfont.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/assets/fonts/qanelas-semibold-webfont.woff2') format('woff2'),
+  url('/assets/fonts/qanelas-semibold-webfont.woff') format('woff'),
+  url('/assets/fonts/qanelas-semibold-webfont.ttf')  format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 
