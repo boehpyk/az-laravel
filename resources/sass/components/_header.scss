@@ -92,18 +92,18 @@
             }
 
             &.left {
-                background-image: url('../assets/autumn-site/bgr-concert-left.jpg');
+                background-image: url('/assets/autumn-site/bgr-concert-left.jpg');
                 background-position: left top;
                 @media (max-width: 768px) {
-                    background-image: url('../assets/autumn-site/bgr-concert-left-sm.jpg');
+                    background-image: url('/assets/autumn-site/bgr-concert-left-sm.jpg');
                 }
             }
             &.right {
-                background-image: url('../assets/autumn-site/bgr-concert-right.jpg');
+                background-image: url('/assets/autumn-site/bgr-concert-right.jpg');
                 background-position: right top;
                 text-align: right;
                 @media (max-width: 768px) {
-                    background-image: url('../assets/autumn-site/bgr-concert-right-sm.jpg');
+                    background-image: url('/assets/autumn-site/bgr-concert-right-sm.jpg');
                 }
                 .concert-item-container {
                     @media (min-width: 769px) {
@@ -265,7 +265,7 @@
                     left: 0;
                     width: 100%;
                     height: 8px;
-                    background: url('../assets/autumn-site/timetolove-bgr.jpg') center top no-repeat;
+                    background: url('/assets/autumn-site/timetolove-bgr.jpg') center top no-repeat;
                     background-size: 98% auto;
                     @media (max-width: 768px) {
                         display: none;

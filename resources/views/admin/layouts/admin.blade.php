@@ -62,13 +62,13 @@
                 <li class="list-group-item"><a href="{{ route('admin_events_create') }}">Добавить концерт</a></li>
             </ul>
 
-            <h4>Билетные виджеты</h4>
-            <ul class="list-group mb-3">
-                <li class="list-group-item">
-                    <a href="{{ route('admin_widgets_index') }}">Виджеты</a>
-                </li>
-                <li class="list-group-item"><a href="{{ route('admin_widgets_create') }}">Добавить виджет</a></li>
-            </ul>
+            {{--<h4>Билетные виджеты</h4>--}}
+            {{--<ul class="list-group mb-3">--}}
+                {{--<li class="list-group-item">--}}
+                    {{--<a href="{{ route('admin_widgets_index') }}">Виджеты</a>--}}
+                {{--</li>--}}
+                {{--<li class="list-group-item"><a href="{{ route('admin_widgets_create') }}">Добавить виджет</a></li>--}}
+            {{--</ul>--}}
 
             <h4>Видео</h4>
             <ul class="list-group mb-3">
@@ -86,16 +86,13 @@
                 <li class="list-group-item"><a href="{{ route('admin_links_create') }}">Добавить ссылку</a></li>
             </ul>
 
-            <h4>Текстовые ссылки наверху</h4>
-            <ul class="list-group mb-3">
-                <li class="list-group-item">
-                    <a href="{{ route('admin_text_links_index') }}">Список</a>
-                </li>
-                <li class="list-group-item"><a href="{{ route('admin_text_links_create') }}">Добавить ссылку</a></li>
-            </ul>
-
-
-
+            {{--<h4>Текстовые ссылки наверху</h4>--}}
+            {{--<ul class="list-group mb-3">--}}
+                {{--<li class="list-group-item">--}}
+                    {{--<a href="{{ route('admin_text_links_index') }}">Список</a>--}}
+                {{--</li>--}}
+                {{--<li class="list-group-item"><a href="{{ route('admin_text_links_create') }}">Добавить ссылку</a></li>--}}
+            {{--</ul>--}}
 
 
         </aside>
