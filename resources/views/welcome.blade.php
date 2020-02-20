@@ -175,54 +175,63 @@
                     <h2 class="mdc-typography--display1">
                         КОНЦЕРТЫ
                     </h2>
+
+                    <div class="concerts-list">
                     @foreach($events as $event)
                         @php
                             $tickets_url = base64_decode($event->tickets_url)
                         @endphp
 
-                    <div class="concert mdc-card">
-                        <div class="concert__container mdc-list-group">
-                            <ul class="mdc-list mdc-list--two-line">
-                                <div class="concert__item mdc-list-item">
-                                    <span class="concert__date mdc-list-item__graphic">
-                                      {{ \Carbon\Carbon::parse($event->date_begin)->format('d') }}
-                                        <span class="concert__month">
-                                        {{ $event->date_begin_russian_month }}
-                                      </span>
-                                    </span>
-                                    <span class="mdc-list-item__text">
-                                        {{ $event->city }}
-                                        <span class="mdc-list-item__secondary-text club-name">
-                                            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                                <path d="M0 0h24v24H0z" fill="none"/>
-                                            </svg>
-                                            {{ $event->club_name }}
-                                        </span>
-                                    </span>
 
-                                    <div class="mdc-list-item__meta icon icon__info">
-                                        @if (strpos($tickets_url, "http://") === 0 || (strpos($tickets_url, "https://") === 0))
-                                            <a href="{{ $tickets_url }}" target="_blank" class="mdc-button mdc-button--stroked buy-ticket">
-                                                <div class="mdc-button__ripple"></div>
-                                                <span class="mdc-button__label">Купить билет</span>
-                                            </a>
-                                        @endif
-                                        @if (strpos($tickets_url, "<script") === 0)
-                                            {!! $tickets_url !!}
-                                        @endif
-                                        <a href="{{ $event->meeting_url }}" target="_blank">
-                                            <svg  height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-                                            </svg>
-                                        </a>
+                        <div class="concert-item">
+                            <div class="date">
+                                <div class="date-day">
+                                    {{ \Carbon\Carbon::parse($event->date_begin)->format('d') }}
+                                </div>
+                                <div class="date-month">
+                                {{ $event->date_begin_russian_month }}
+                                </div>
+                            </div>
+                            <div class="place-tickets">
+                                <div class="place">
+                                    {{ $event->city }}
+                                    <div class="club-name">
+                                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                            <path d="M0 0h24v24H0z" fill="none"/>
+                                        </svg>
+                                        {{ $event->club_name }}
                                     </div>
                                 </div>
-                            </ul>
+                                <div class="tickets">
+                                    @if (strpos($tickets_url, "http://") === 0 || (strpos($tickets_url, "https://") === 0))
+                                        <a href="{{ $tickets_url }}" target="_blank" class="buy-ticket">
+                                            <div class="mdc-button__ripple"></div>
+                                            <span class="mdc-button__label">Купить билет</span>
+                                        </a>
+                                    @endif
+                                    @if (strpos($tickets_url, "<script") === 0)
+                                        {!! $tickets_url !!}
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <a href="{{ $event->meeting_url }}" target="_blank">
+                                    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 30 17.1" style="enable-background:new 0 0 30 17.1;" xml:space="preserve">
+                                        <path d="M30,1.2c0.2,0.6-0.5,2.1-2.3,4.6c-3,4-3.4,3.7-0.9,6c2.4,2.2,2.9,3.3,3,3.5c0,0,1,1.8-1.1,1.8l-4,0.1c-0.9,0.2-2-0.6-2-0.6
+                                            c-1.5-1-2.9-3.7-4-3.4c0,0-1.1,0.4-1.1,2.8c0,0.5-0.2,0.8-0.2,0.8S17,17,16.5,17h-1.8c-4,0.3-7.4-3.4-7.4-3.4S3.4,9.7,0.1,1.8
+                                            c-0.2-0.5,0-0.8,0-0.8S0.3,0.8,1,0.8l4.3,0C5.7,0.8,6,1,6,1s0.3,0.2,0.4,0.5C7,3.3,8,4.9,8,4.9c1.6,3.2,2.6,3.8,3.2,3.4
+                                            c0,0,0.8-0.5,0.6-4.4c-0.1-1.4-0.5-2-0.5-2c-0.4-0.5-1-0.6-1.3-0.7c-0.2,0,0.2-0.6,0.7-0.8C11.5,0,12.8,0,14.4,0
+                                            c1.3,0,1.6,0.1,2.1,0.2c1.5,0.4,1,1.7,1,5c0,1.1-0.2,2.5,0.6,3c0.3,0.2,1.1,0,3.1-3.4c0,0,0.9-1.6,1.7-3.5C23,1,23.3,0.9,23.3,0.9
+                                            s0.3-0.1,0.6-0.1l4.5,0C29.7,0.6,30,1.2,30,1.2z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
+                    </div>
                 </section>
 
                 @if (count($videos) > 0)

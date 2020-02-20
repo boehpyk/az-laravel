@@ -2,54 +2,114 @@
   margin-bottom: 40px;
 }
 
-.concert {
+.concerts-list {
   overflow: hidden;
   margin-top: 5px;
+  padding: 5px;
 
   &__container {
     padding-left: 0;
   }
 
-  &__item {
+  .concert-item {
     padding-left: 0;
-    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    letter-spacing: .04em;
+    color: rgba(0,0,0,.87);
+    margin-top: 5px;
+    line-height: 1.5rem;
+    border-radius: 2px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
     svg {
       fill: rgba(0, 0, 0, 0.54);
       width: 24px;
       height: 24px;
       margin-bottom: -7px;
     }
-  }
 
-  &__date {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 72px;
-    height: 100%;
-    padding-right: 2px;
-    text-align: center;
-    color: $app-color-grey-light;
-    background-color: $app-color-grey-rgba;
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  &__month {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  .club-name {
-    svg {
-      width: 14px;
-      height: 14px;
-      margin-bottom: -2px;
+    .date {
+      order: 1;
+      width: 72px;
+      flex: 0 0 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 2px;
+      text-align: center;
+      color: $app-color-grey-light;
+      background-color: $app-color-grey-rgba;
+      font-size: 22px;
+      font-weight: 500;
+      .date-month {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .place-tickets {
+      order: 2;
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-between;
+      color: inherit;
+      padding: 8px 5px 8px 32px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      @media only screen and (max-width: 480px) {
+        padding: 8px 5px 8px 12px;
+        flex-wrap: wrap;
+      }
+      .place {
+        min-width: 140px;
+      }
+      .club-name {
+        font-size: .875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        letter-spacing: .04em;
+        text-decoration: inherit;
+        text-transform: inherit;
+        color: rgba(0,0,0,.57);
+        svg {
+          width: 14px;
+          height: 14px;
+          margin-bottom: -2px;
+        }
+      }
+      .tickets {
+        .buy-ticket {
+          display: inline-block;
+          cursor: pointer;
+          white-space: nowrap;
+          padding: 9px 16px;
+          border-radius: 5px;
+          color: rgb(255, 255, 255);
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+          line-height: normal;
+          text-align: center;
+          margin-bottom: 8px;
+          margin-top: 8px;
+          text-decoration: none;
+          background-color: rgb(102, 34, 78);
+        }
+      }
+    }
+    .info {
+      order: 4;
+      flex: 0 0 30px;
+      align-self: center;
+      padding-left: 10px;
     }
   }
+
   .mdc-list-item {
     @media only screen and (max-width: 480px) {
       padding: 0 4px;
