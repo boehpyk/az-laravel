@@ -26,8 +26,10 @@
 
 <header class="header-section row no-gutters">
     <div class="header-section__container">
-        <div class="header-section__main-photo">
-            <img src="{{ asset('assets/autumn-site/band-photo.jpg') }}" border="0" alt="Animal ДжаZ" />
+        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/autumn-site/band-photo.jpg') }}">
+{{--            <img src="{{ asset('assets/autumn-site/band-photo.jpg') }}" border="0" alt="Animal ДжаZ" />--}}
+            <img src="{{ asset('assets/autumn-site/band-photo-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
+            <div style="padding-bottom: 49.29%;"></div>
         </div>
         <div class="header-section__logo">
             <img src="{{ asset('assets/az.svg') }}" border="0" alt="Animal ДжаZ logo" class="logo" />
@@ -389,7 +391,7 @@
     </div>
 </footer>
 
-
+<script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
 
 
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?166",t.onload=function(){VK.Retargeting.Init("VK-RTRG-449929-hfzAe"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-449929-hfzAe" style="position:fixed; left:-999px;" alt=""/></noscript>
