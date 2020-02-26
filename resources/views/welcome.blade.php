@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
 
 </head>
@@ -391,7 +391,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
+<script type="text/javascript" src="{{ mix('js/app.js') }}" defer></script>
 
 
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?166",t.onload=function(){VK.Retargeting.Init("VK-RTRG-449929-hfzAe"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-449929-hfzAe" style="position:fixed; left:-999px;" alt=""/></noscript>

@@ -19,5 +19,8 @@ mix.react('resources/js/app.js', 'public/js')
     // .js('resources/js/index.js', 'public/js/app.js')
     // .extract(['react', 'react-dom'])
     .sourceMaps()
-    .version()
 ;
+
+if (mix.inProduction()) {
+    mix.version();
+}
