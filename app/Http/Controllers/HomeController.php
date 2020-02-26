@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Widget;
 use App\Video;
 use App\Event;
+use App\SEO;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -67,6 +68,8 @@ class HomeController extends Controller
             ->inRandomOrder()
             ->limit(1)->get();
 //            ->orderBy(DB::raw('RAND()'))->get();
+
+        $data['seo'] = SEO::get()->first();
 
 
 

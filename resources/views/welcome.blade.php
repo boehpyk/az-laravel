@@ -3,16 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Animal Jazz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <title>{{ $seo->title }}</title>
+    <meta name="description" content="{{ $seo->description }}" />
+    <meta name="keywords" content="{{ $seo->keywords }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Animal ДжаZ" />
-    <meta property="og:description" content="Animal ДжаZ — флагман российской альтернативной музыки, обладатели двух премий RAMP-2007, лучшего рок-альбома 2015 года по версии iTunes Russia и двух премий «Чартова Дюжина» за лучший альбом и лучшую песню 2015 года." />
+    <meta property="og:description" content="{{ $seo->description }}" />
     <meta property="og:url" content="http://animaljazz.com/" />
     <meta property="og:image" content="{{ asset('assets/band-photo-vk.jpg') }}" />
     <meta property="vk:image" content="{{ asset('assets/band-photo-vk.jpg') }}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+
 
 </head>
 

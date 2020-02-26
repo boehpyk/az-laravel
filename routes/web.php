@@ -58,6 +58,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
     Route::get('/text_links/{text_link}/edit', 'TextLinkController@edit')->where('id', '[0-9]+')->name('admin_text_links_edit');
     Route::post('/text_links/{text_link}/edit', 'TextLinkController@update')->where('id', '[0-9]+')->name('admin_text_links_update');
     Route::post('/text_links/{text_link}/delete', 'TextLinkController@destroy')->where('id', '[0-9]+')->name('admin_text_links_delete');
+
+    /**
+     * SEO
+     */
+    Route::get('/seo/edit', 'SEOController@edit')->name('admin_seo_edit');
+    Route::post('/seo/edit', 'SEOController@update')->name('admin_seo_update');
     
 
     

@@ -86,13 +86,10 @@
                 <li class="list-group-item"><a href="{{ route('admin_links_create') }}">Добавить ссылку</a></li>
             </ul>
 
-            {{--<h4>Текстовые ссылки наверху</h4>--}}
-            {{--<ul class="list-group mb-3">--}}
-                {{--<li class="list-group-item">--}}
-                    {{--<a href="{{ route('admin_text_links_index') }}">Список</a>--}}
-                {{--</li>--}}
-                {{--<li class="list-group-item"><a href="{{ route('admin_text_links_create') }}">Добавить ссылку</a></li>--}}
-            {{--</ul>--}}
+            <h4>SEO</h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><a href="{{ route('admin_seo_edit') }}">Редактировать SEO</a></li>
+            </ul>
 
 
         </aside>
