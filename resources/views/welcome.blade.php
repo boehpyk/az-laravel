@@ -73,15 +73,16 @@
                 <a href="https://iframeab-pre2526.intickets.ru/node/11347669" target="_blank" class="tickets-sm">Билеты</a>
             </div>
         </div>
-        <section class="header-section__top-links">
-            <ul class="top-links__container">
-                <li>
-                    <a class="top-link" target="_blank" href="https://vk.com/wall-2571_59421" role="listitem" title="Голосовать за песни">
-                        Выбрать песни для концертов по заявкам
-                    </a>
-                </li>
-            </ul>
-        </section>
+
+        {{--<section class="header-section__top-links">--}}
+            {{--<ul class="top-links__container">--}}
+                {{--<li>--}}
+                    {{--<a class="top-link" target="_blank" href="https://vk.com/wall-2571_59421" role="listitem" title="Голосовать за песни">--}}
+                        {{--Выбрать песни для концертов по заявкам--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+            {{--</ul>--}}
+        {{--</section>--}}
 
     </div>
 </header>
