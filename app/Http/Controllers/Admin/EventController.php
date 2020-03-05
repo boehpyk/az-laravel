@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use App\Event;
 use App\Http\Requests\StoreEvent;
 use App\Files\EventFiles;
@@ -13,17 +14,47 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param integer $year - year for archive
      * @param boolean $archive - show archive of events or future events
      * @return \Illuminate\Http\Response
      */
-    public function index($archive = false)
+    public function index($year = null, $archive = false)
     {
+        $year = $year ?? Carbon::now()->format('Y');
+
         $data = [];
 
         $current_date = Carbon::now()->format('Y-m-d');
 
-        $data['events'] = Event::where('date_begin', (($archive) ? '<=' : '>='), $current_date)->orderBy('date_begin', 'desc')->paginate(20);
+        if ($archive) {
+            $from = new Carbon($year . '-01-01 00:00:00');
+            if ($year == Carbon::now()->format('Y')) {
+                $to =  Carbon::now()->subDay()->format('Y-m-d 23:59:59');
+            }
+            else {
+                $to = new Carbon($year . '-12-31 23:59:59');
+            }
+
+            $data['events'] = Event::whereBetween('date_begin', [$from, $to])->orderBy('date_begin', 'desc')->get();
+        }
+        else {
+            $data['events'] = Event::where('date_begin', '>=', $current_date)->orderBy('date_begin', 'asc')->get();
+        }
+
+        $years = DB::table('events')->select(DB::raw('YEAR(date_begin) as year'))
+                        ->distinct()
+                        ->pluck('year')
+                        ->toArray();
+
+        rsort($years);
+
+        $data['years'] = $years;
+
+        $data['current_year'] = $year;
+
         $data['title'] = (($archive) ? 'Архив концертов' : 'Будущие концерты');
+
+        $data['archive'] = $archive;
 
         return view('admin.events.index', $data);
     }

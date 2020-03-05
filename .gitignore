@@ -12,3 +12,4 @@ yarn-error.log
 /storage/framework/cache
 /storage/logs
 .DS_Store
+/var

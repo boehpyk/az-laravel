@@ -11,12 +11,20 @@
 |
 */
 
+use App\Http\Controllers\Admin\EventController;
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'App\Http\Middleware\AdminMiddleware']], function() {
     Route::get('/', function () {
         return view('admin/index');
     })->name('admin_index');
     Route::get('/events', 'EventController@index')->name('admin_events_index')->defaults('archive', false);
-    Route::get('/events/archive', 'EventController@index')->name('admin_events_archive')->defaults('archive', true);
+//    Route::get('/events/archive/{year?}/', 'EventController@index')->name('admin_events_archive')->defaults('archive', true);
+
+    Route::get('/events/archive/{year?}/', function ($year = null) {
+        $controller = new EventController();
+        return $controller->index($year, true);
+    })->where('year', '[0-9]{0,4}')->name('admin_events_archive');
+
     Route::get('/events/create', 'EventController@create')->name('admin_events_create');
     Route::post('/events/create', 'EventController@store')->name('admin_events_store');
     Route::get('/events/{event}', 'EventController@show')->where('id', '[0-9]+')->name('admin_events_show');
