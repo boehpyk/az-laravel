@@ -73,7 +73,45 @@ class HomeController extends Controller
 
 
 
-        return view('welcome', $data);
+        return view('index', $data);
     }
+
+    /**
+     * Show the events archive page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function archive($year = null)
+    {
+        $year = $year ?? Carbon::now()->format('Y');
+
+        $data = [];
+
+        $from = new Carbon($year . '-01-01 00:00:00');
+        if ($year == Carbon::now()->format('Y')) {
+            $to =  Carbon::now()->subDay()->format('Y-m-d 23:59:59');
+        }
+        else {
+            $to = new Carbon($year . '-12-31 23:59:59');
+        }
+
+        $data['events'] = Event::whereBetween('date_begin', [$from, $to])->orderBy('date_begin', 'desc')->get();
+
+        $years = DB::table('events')->select(DB::raw('YEAR(date_begin) as year'))
+            ->distinct()
+            ->pluck('year')
+            ->toArray();
+
+        rsort($years);
+
+        $data['years'] = $years;
+
+        $data['current_year'] = $year;
+
+        $data['seo'] = SEO::get()->first();
+
+        return view('archive', $data);
+    }
+
 
 }

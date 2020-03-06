@@ -79,6 +79,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
 
 Route::get('/', 'HomeController@home')->name('index_page');
 
+/**
+ * Events archive page
+ */
+Route::get('/archive/{year?}', 'HomeController@archive')->where('year', '[0-9]{0,4}')->name('events.archive');
+
 
 Auth::routes();
 
