@@ -68,9 +68,9 @@
                     <div class="place">
                         Москва, <span style="white-space: nowrap">ДК Горбунова</span>
                     </div>
-                    <a href="https://iframeab-pre2526.intickets.ru/node/11347669" class="tickets" target="_blank">Билеты</a>
+                    <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" class="tickets" target="_blank">Билеты</a>
                 </div>
-                <a href="https://iframeab-pre2526.intickets.ru/node/11347669" target="_blank" class="tickets-sm">Билеты</a>
+                <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" target="_blank" class="tickets-sm">Билеты</a>
             </div>
         </div>
 
