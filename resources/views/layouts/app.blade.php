@@ -177,6 +177,24 @@
 @yield('content')
 
 
+@if (count($links) > 0)
+<section class="links">
+    @foreach($links as $link)
+        <article class="links-item">
+            <a target="_blank" href="{{ $link->link }}" class="image">
+                <img src="{{ asset('storage/LinkImages/'.$link->id.'/cover.jpg') }}" alt="" class="">
+            </a>
+            <a target="_blank" href="{{ $link->link }}" class="button">
+                {{ $link->linktext }}
+            </a>
+        </article>
+    @endforeach
+
+</section>
+@endif
+
+
+
 <footer class="footer">
     <div class="row no-gutters">
         <div class="container">

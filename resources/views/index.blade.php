@@ -151,47 +151,6 @@
                     </div>
                 </section>
 
-                <section class="chart">
-                    <div class="row no-gutters">
-                        <div class="chart__column col-xl-4 col-sm-6">
-                            <article class="item">
-                                <a target="_blank" href="https://music.apple.com/ru/album/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C/1482666167">
-                                    <img class="chart__img" src="{{ asset('assets/SINEVA_HD.jpg') }}" alt="">
-                                </a>
-                                <section class="itunes-buttons">
-                                    <a class="itunes-buttons__link" target="_blank" href="https://music.apple.com/ru/album/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C/1482666167">
-                                        <img src="{{ asset('assets/itunes.png') }}" alt="">
-                                    </a>
-                                    <a class="itunes-buttons__link" target="_blank" href="https://music.apple.com/ru/album/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C/1482666167">
-                                        <img src="{{ asset('assets/itunes-buy.png') }}" alt="">
-                                    </a>
-                                </section>
-                            </article>
-                        </div>
-                        <div class="chart__column col-xl-4 col-sm-6">
-                            <article class="item">
-                                <a target="_blank" href="https://vk.com/market-2571">
-                                    <img class="chart__img chart__img_mb" src="{{ asset('assets/shop.jpg') }}" alt="">
-                                </a>
-                                <a class="chart__button mdc-button mdc-button--raised" target="_blank" href="https://vk.com/market-2571">
-                                    МАГАЗИН
-                                </a>
-                            </article>
-                        </div>
-                        <div class="chart__column col-xl-4">
-                            <article class="item item_last">
-                                <a target="_blank" href="https://www.nashe.ru/chartova2020">
-                                    <img class="chart__img chart__img_mb" src="{{ asset('assets/starttt.jpg') }}" alt="">
-                                </a>
-                                <a class="chart__button mdc-button mdc-button--raised" target="_blank" href="https://www.nashe.ru/chartova2020">
-                                    Голосовать
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-
             </div>
         </div>
     </div>
