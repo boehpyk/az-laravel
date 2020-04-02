@@ -104,6 +104,10 @@ class HomeController extends Controller
 
         rsort($years);
 
+        $data['links'] = Link::select('id', 'link', 'linktext')
+            ->where('is_publish', 'yes')
+            ->orderBy('id', 'asc')->get();
+
         $data['years'] = $years;
 
         $data['current_year'] = $year;
