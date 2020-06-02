@@ -18,6 +18,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
+    <meta name="google-site-verification" content="Ba7QtcC04kElBlZdu_JXpY1vJOw-J7WB4iX2XXravvs" />
+
 
 </head>
 
