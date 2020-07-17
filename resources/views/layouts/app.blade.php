@@ -20,6 +20,9 @@
 
     <meta name="google-site-verification" content="Ba7QtcC04kElBlZdu_JXpY1vJOw-J7WB4iX2XXravvs" />
 
+    <!-- Билеты на 22.08.2020 -->
+    <script type="text/javascript" src="https://ponominalu.ru/widget/static/js/pnwidget_loader.js" charset="UTF-8"></script>
+
 
 </head>
 
@@ -37,44 +40,48 @@
             <img src="{{ asset('assets/az.svg') }}" border="0" alt="Animal ДжаZ logo" class="logo" />
         </div>
 
-        {{--<div class="header-section__concerts">--}}
-            {{--<div class="concerts-title">--}}
-                {{--<div class="title-container">--}}
-                    {{--<div class="time-to-love">--}}
-                        {{--Концерты по заявкам--}}
-                        {{--<div class="shadow"></div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="concert-item left">--}}
-                {{--<div class="concert-item-container">--}}
-                    {{--<div class="date">08.03</div>--}}
-                    {{--<div class="date-sm">08.03</div>--}}
-                    {{--<div class="place">--}}
-                        {{--Санкт-Петербург, Космонавт--}}
-                    {{--</div>--}}
-                    {{--<a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets" target="_blank">Билеты</a>--}}
-                {{--</div>--}}
-                {{--<a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets-sm" target="_blank">Билеты</a>--}}
-            {{--</div>--}}
-            {{--<div class="space">--}}
-            {{--</div>--}}
-            {{--<div class="concert-item right">--}}
-                {{--<div class="concert-item-container">--}}
-                    {{--<div class="date">--}}
-                        {{--20.03--}}
-                    {{--</div>--}}
-                    {{--<div class="date-sm">--}}
-                        {{--20.03--}}
-                    {{--</div>--}}
-                    {{--<div class="place">--}}
-                        {{--Москва, <span style="white-space: nowrap">ДК Горбунова</span>--}}
-                    {{--</div>--}}
-                    {{--<a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" class="tickets" target="_blank">Билеты</a>--}}
-                {{--</div>--}}
-                {{--<a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" target="_blank" class="tickets-sm">Билеты</a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+        <div class="header-section__concerts">
+            <div class="concerts-title">
+                <div class="title-container">
+                    <div class="time-to-love">
+                        Летний концерт
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="concert-item left">
+                <div class="concert-item-container">
+                    <div class="date">22.08</div>
+                    <div class="date-sm">22.08</div>
+                    <div class="place">
+                        Москва, Gipsy
+                    </div>
+{{--                    <a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets" target="_blank">Билеты</a>--}}
+                    <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                </div>
+{{--                <a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets-sm" target="_blank">Билеты</a>--}}
+                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+            </div>
+            <div class="space">
+            </div>
+            <div class="concert-item right">
+                <div class="concert-item-container">
+                    <div class="date">
+                        22.08
+                    </div>
+                    <div class="date-sm">
+                        22.08
+                    </div>
+                    <div class="place">
+                        Москва, Gipsy
+                    </div>
+{{--                    <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" class="tickets" target="_blank">Билеты</a>--}}
+                    <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                </div>
+{{--                <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" target="_blank" class="tickets-sm">Билеты</a>--}}
+                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+            </div>
+        </div>
 
         {{--<section class="header-section__top-links">--}}
         {{--<ul class="top-links__container">--}}
@@ -222,7 +229,6 @@
 </footer>
 
 <script type="text/javascript" src="{{ mix('js/app.js') }}" defer></script>
-
 
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?166",t.onload=function(){VK.Retargeting.Init("VK-RTRG-449929-hfzAe"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-449929-hfzAe" style="position:fixed; left:-999px;" alt=""/></noscript>
 
