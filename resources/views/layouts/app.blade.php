@@ -23,7 +23,6 @@
     <!-- Билеты на 22.08.2020 -->
     <script type="text/javascript" src="https://ponominalu.ru/widget/static/js/pnwidget_loader.js" charset="UTF-8"></script>
 
-
 </head>
 
 <body class="justerest-modal mdc-typography">
@@ -44,23 +43,21 @@
             <div class="concerts-title">
                 <div class="title-container">
                     <div class="time-to-love">
-                        Летний концерт
+                        Летние концерты
                         <div class="shadow"></div>
                     </div>
                 </div>
             </div>
             <div class="concert-item left">
                 <div class="concert-item-container">
-                    <div class="date">22.08</div>
-                    <div class="date-sm">22.08</div>
+                    <div class="date">20.08</div>
+                    <div class="date-sm">20.08</div>
                     <div class="place">
-                        Москва, Gipsy
+                        Питер, HI-HAT
                     </div>
-{{--                    <a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets" target="_blank">Билеты</a>--}}
-                    <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                    <a href="https://www.cosmonavt.su/animal-dzhaz-na-kryshe-hi-hat?utm_source=vkaj&utm_medium=promo&utm_campaign=m" class="tickets" target="_blank">Билеты</a>
                 </div>
-{{--                <a href="https://spb.ponominalu.ru/event/animal-dzhaz" class="tickets-sm" target="_blank">Билеты</a>--}}
-                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                <a href="https://www.cosmonavt.su/animal-dzhaz-na-kryshe-hi-hat?utm_source=vkaj&utm_medium=promo&utm_campaign=m" class="tickets-sm" target="_blank">Билеты</a>
             </div>
             <div class="space">
             </div>
