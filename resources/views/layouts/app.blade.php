@@ -72,11 +72,11 @@
                     <div class="place">
                         Москва, Gipsy
                     </div>
-{{--                    <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" class="tickets" target="_blank">Билеты</a>--}}
-                    <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                    <a href="https://summersound.ru/animaljazz/" class="tickets" target="_blank">Билеты</a>
+{{--                    <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">--}}
                 </div>
-{{--                <a href="https://afisha.yandex.ru/moscow/concert/animal-dzhaz-2020-03" target="_blank" class="tickets-sm">Билеты</a>--}}
-                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">
+                <a href="https://summersound.ru/animaljazz/" target="_blank" class="tickets-sm">Билеты</a>
+{{--                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">--}}
             </div>
         </div>
 
