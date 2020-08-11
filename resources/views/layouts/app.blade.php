@@ -50,8 +50,8 @@
             </div>
             <div class="concert-item left">
                 <div class="concert-item-container">
-                    <div class="date">20.08</div>
-                    <div class="date-sm">20.08</div>
+                    <div class="date">20/25.08</div>
+                    <div class="date-sm">20/25.08</div>
                     <div class="place">
                         Питер, HI-HAT
                     </div>
