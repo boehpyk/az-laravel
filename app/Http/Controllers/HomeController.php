@@ -53,7 +53,7 @@ class HomeController extends Controller
             ->where('is_publish', 'yes')
             ->orderBy('id', 'desc')->get();
 
-        $data['events'] = Event::select('id', 'date_begin', 'date_end', 'city', 'meeting_url', 'club_name', 'tickets_url')
+        $data['events'] = Event::select('id', 'date_begin', 'date_end', 'city', 'meeting_url', 'club_name', 'tickets_url', 'button_label')
             ->where('date_begin', '>=', $current_date)
             ->where('is_publish', 'yes')
             ->orderBy('date_begin', 'asc')

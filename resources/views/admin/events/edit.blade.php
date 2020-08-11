@@ -65,8 +65,13 @@
             </div>
             <div class="form-group row">
                 <label for="event_tickets_url" class="col-sm-3 col-form-label">Продажа билетов</label>
-                <div class="col-sm-9">
+                <div class="col-sm-6">
+                    <b>Ссылка или скрипт виджета</b><br />
                     <textarea name="tickets_url" class="form-control" id="event_tickets_url">{{ base64_decode($event->tickets_url) }}</textarea>
+                </div>
+                <div class="col-sm-3">
+                    <b>Надпись на кнопке</b><br />
+                    <input type="text" name="button_label" class="form-control" id="event_buttin_label" value="{{ $event->button_label }}">
                 </div>
             </div>
             <div class="form-group row">

@@ -28,7 +28,8 @@ class Event extends Model
         'club_name',
         'club_url',
         'meeting_url',
-        'description'
+        'description',
+        'button_label'
     ];
 
     /**

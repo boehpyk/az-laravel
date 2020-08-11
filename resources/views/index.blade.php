@@ -15,7 +15,7 @@
                     </h2>
 
                     <div class="concerts-list">
-                        @foreach($events as $event)
+                        @foreach ($events as $event)
                             @php
                                 $tickets_url = base64_decode($event->tickets_url)
                             @endphp

@@ -12,9 +12,7 @@ const mix = require('laravel-mix');
  */
 mix.react('resources/js/app.js', 'public/js')
     .js('resources/js/admin/admin.js', 'public/js/admin')
-    .sass('resources/sass/app.scss', 'public/css', {
-        includePaths: ['./node_modules']
-    })
+    .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin/admin.scss', 'public/css/admin')
     // .js('resources/js/index.js', 'public/js/app.js')
     // .extract(['react', 'react-dom'])

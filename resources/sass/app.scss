@@ -2,12 +2,40 @@
 @import "fonts";
 @import "transitions";
 
+/* packages */
+@import "~@material/button/mdc-button";
+@import "~@material/card/mdc-card";
+@import "~@material/list/mdc-list";
+@import "~@material/ripple/mdc-ripple";
+@import "~@material/typography/mdc-typography";
+@import "~bootstrap/scss/bootstrap-grid";
+
+/* Utils */
+@import "globals";
+
+/* Components */
+@import "components/header";
+@import "components/navbar";
+@import "components/tours";
+@import "components/youtube-video";
+@import "components/contacts";
+@import "components/chart";
+@import "components/footer";
+@import "components/links";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Rubik&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Cuprum&subset=cyrillic");
+
+
 
 body,
 html {
-  overflow: hidden;
-  max-width: 100vw;
-  max-height: 100vh;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    font-size: 16px;
 
   &.-overflow-visible {
     overflow: auto;
@@ -17,32 +45,6 @@ html {
 }
 
 .justerest-modal {
-  /* packages */
-  @import "~@material/button/mdc-button";
-  @import "~@material/card/mdc-card";
-  @import "~@material/list/mdc-list";
-  @import "~@material/ripple/mdc-ripple";
-  @import "~@material/typography/mdc-typography";
-  @import "~bootstrap/scss/bootstrap-grid";
-
-  /* Utils */
-  @import "globals";
-
-  /* Components */
-  @import "components/header";
-  @import "components/navbar";
-  @import "components/tours";
-  @import "components/youtube-video";
-  @import "components/contacts";
-  @import "components/chart";
-  @import "components/footer";
-  @import "components/links";
-
-  /* Fonts */
-  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
-  @import url("https://fonts.googleapis.com/css?family=Rubik&subset=cyrillic");
-  @import url("https://fonts.googleapis.com/css?family=Cuprum&subset=cyrillic");
-
   position: fixed;
   top: 0;
   left: 0;
