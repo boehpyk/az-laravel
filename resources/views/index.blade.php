@@ -45,7 +45,13 @@
                                         @if (strpos($tickets_url, "http://") === 0 || (strpos($tickets_url, "https://") === 0))
                                             <a href="{{ $tickets_url }}" target="_blank" class="buy-ticket">
                                                 <div class="mdc-button__ripple"></div>
-                                                <span class="mdc-button__label">Купить билет</span>
+                                                <span class="mdc-button__label">
+                                                    @if ($event->button_label !== null && $event->button_label !== '')
+                                                        {{ $event->button_label }}
+                                                    @else
+                                                        Купить билет
+                                                    @endif
+                                                </span>
                                             </a>
                                         @endif
                                         @if (strpos($tickets_url, "<script") === 0)
