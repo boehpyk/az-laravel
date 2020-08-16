@@ -10,7 +10,8 @@
   &__container {
       position: relative;
       margin: 0 auto;
-      width: 100%;z
+      width: 100%;
+      max-width: 1180px;
       img {
           max-width: 100%;
           height: auto;
@@ -114,16 +115,20 @@
             &.left {
                 background-image: url('/assets/autumn-site/bgr-concert-left.jpg');
                 background-position: left top;
+                padding-left: 2%;
                 @media (max-width: 768px) {
                     background-image: url('/assets/autumn-site/bgr-concert-left-sm.jpg');
+                    padding: 0;
                 }
             }
             &.right {
                 background-image: url('/assets/autumn-site/bgr-concert-right.jpg');
                 background-position: right top;
                 text-align: right;
+                padding-right: 2%;
                 @media (max-width: 768px) {
                     background-image: url('/assets/autumn-site/bgr-concert-right-sm.jpg');
+                    padding: 0;
                 }
                 .concert-item-container {
                     @media (min-width: 769px) {
@@ -132,7 +137,7 @@
                 }
             }
             .date {
-                font-size: 4vw;
+                font-size: 2.4rem;
                 font-weight: 500;
                 @media (max-width: 768px) {
                     display: none;
@@ -151,8 +156,8 @@
                 }
             }
             .place {
-                margin-top: 20px;
-                font-size: 1.9vw;
+                margin-top: 10px;
+                font-size: 2.2rem;
                 text-transform: uppercase;
                 @media (max-width: 768px) {
                     margin: 10px 0 10px 0;
@@ -162,10 +167,10 @@
             .tickets {
                 display: inline-block;
                 padding: 10px 20px;
-                margin-top: 20px;
+                margin-top: 15px;
                 background-color: $app-color-white;
                 color: $app-color-black;
-                font-size: 2vw;
+                font-size: 1.8rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 text-decoration: none;
@@ -214,7 +219,6 @@
         }
         .concert-item-container {
             width: 21vw;
-            text-align: center;
             @media (max-width: 768px) {
                 width: 50%;
             }
@@ -246,7 +250,7 @@
                 display: inline-block;
                 padding: 25px;
                 position: relative;
-                font-size: 2.8vw;
+                font-size: 2.4rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 @media (max-width: 768px) {
