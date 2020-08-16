@@ -17,7 +17,7 @@
           height: auto;
           &.logo {
               display: block;
-              width: 80%;
+              width: 65%;
               margin: 0 auto;
           }
       }
@@ -110,6 +110,7 @@
                 justify-content: flex-start;
                 width: 100%;
                 background-size: 100% 100%;
+                padding: 10px 0 0 10px;
             }
 
             &.left {
@@ -118,7 +119,6 @@
                 padding-left: 2%;
                 @media (max-width: 768px) {
                     background-image: url('/assets/autumn-site/bgr-concert-left-sm.jpg');
-                    padding: 0;
                 }
             }
             &.right {
@@ -128,7 +128,7 @@
                 padding-right: 2%;
                 @media (max-width: 768px) {
                     background-image: url('/assets/autumn-site/bgr-concert-right-sm.jpg');
-                    padding: 0;
+                    text-align: left;
                 }
                 .concert-item-container {
                     @media (min-width: 769px) {

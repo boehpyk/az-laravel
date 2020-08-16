@@ -30,10 +30,10 @@
 
 <header class="header-section row no-gutters">
     <div class="header-section__container">
-        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/autumn-site/band-photo.jpg') }}">
+        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/autumn-site/band-photo-narrow.jpg') }}">
             {{--            <img src="{{ asset('assets/autumn-site/band-photo.jpg') }}" border="0" alt="Animal ДжаZ" />--}}
-            <img src="{{ asset('assets/autumn-site/band-photo-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
-            <div style="padding-bottom: 49.29%;"></div>
+            <img src="{{ asset('assets/autumn-site/band-photo-narrow-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
+            <div style="padding-bottom: 40%;"></div>
         </div>
         <div class="header-section__logo">
             <img src="{{ asset('assets/az.svg') }}" border="0" alt="Animal ДжаZ logo" class="logo" />
