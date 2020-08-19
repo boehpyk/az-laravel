@@ -50,10 +50,10 @@
             </div>
             <div class="concert-item left">
                 <div class="concert-item-container">
-                    <div class="date">20/25.08</div>
-                    <div class="date-sm">20/25.08</div>
+                    <div class="date">25.08</div>
+                    <div class="date-sm">25.08</div>
                     <div class="place">
-                        Питер, HI-HAT
+                        Питер, ROOF PLACE
                     </div>
                     <a href="https://www.cosmonavt.su/animal-dzhaz-na-kryshe-hi-hat?utm_source=vkaj&utm_medium=promo&utm_campaign=m" class="tickets" target="_blank">Билеты</a>
                 </div>
