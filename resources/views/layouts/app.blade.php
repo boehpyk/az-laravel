@@ -188,7 +188,7 @@
                 <a href="http://2020.animaljazz.com/" target="_blank" class="buy-ticket">
                     <div class="mdc-button__ripple"></div>
                     <span class="mdc-button__label">
-                        Стать участником
+                        Попасть на концерт
                     </span>
                 </a>
             </div>
