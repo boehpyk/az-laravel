@@ -1,0 +1,31 @@
+.announces {
+    .announce {
+        margin: 25px auto 10px auto;
+        font-size: 1.3rem;
+        text-align: justify;
+        a {
+            text-decoration: none;
+            color: rgb(102, 34, 78);
+        }
+        .tickets {
+            text-align: center;
+            padding-top: 15px;
+            a.buy-ticket {
+                display: inline-block;
+                cursor: pointer;
+                white-space: nowrap;
+                padding: 9px 16px;
+                border-radius: 5px;
+                color: rgb(255, 255, 255);
+                font-family: Arial, sans-serif;
+                font-size: 1.2rem;
+                line-height: normal;
+                text-align: center;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                text-decoration: none;
+                background-color: rgb(102, 34, 78);
+            }
+        }
+    }
+}
