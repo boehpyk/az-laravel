@@ -179,22 +179,22 @@
     </div>
 </nav>
 
-<section class="announces">
-    <div class="container">
-        <div class="announce offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-            <strong>Друзья!</strong> В этом году группа <strong>Animal ДжаZ</strong> отмечает свой 20-й день рождения. Эпидемиологическая ситуация не позволяет провести юбилейный концерт в Санкт-Петербурге со стадионным размахом. Поэтому мы приняли решение сыграть в родном городе <a href="http://vk.com/aj_cosmonavt" target="_blank">Закрытый концерт</a> только для самых преданных друзей группы.
-            <div class="tickets">
-                <a href="http://2020.animaljazz.com/" target="_blank" class="buy-ticket">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">
-                        Стать участником
-                    </span>
-                </a>
-            </div>
-        </div>
+{{--<section class="announces">--}}
+{{--    <div class="container">--}}
+{{--        <div class="announce offset-lg-2 col-lg-8 offset-md-1 col-md-10">--}}
+{{--            <strong>Друзья!</strong> В этом году группа <strong>Animal ДжаZ</strong> отмечает свой 20-й день рождения. Эпидемиологическая ситуация не позволяет провести юбилейный концерт в Санкт-Петербурге со стадионным размахом. Поэтому мы приняли решение сыграть в родном городе <a href="http://vk.com/aj_cosmonavt" target="_blank">Закрытый концерт</a> только для самых преданных друзей группы.--}}
+{{--            <div class="tickets">--}}
+{{--                <a href="http://2020.animaljazz.com/" target="_blank" class="buy-ticket">--}}
+{{--                    <div class="mdc-button__ripple"></div>--}}
+{{--                    <span class="mdc-button__label">--}}
+{{--                        Стать участником--}}
+{{--                    </span>--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-    </div>
-</section>
+{{--    </div>--}}
+{{--</section>--}}
 
 
 @yield('content')
