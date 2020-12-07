@@ -57,6 +57,15 @@
                                         @if (strpos($tickets_url, "<script") === 0)
                                             {!! $tickets_url !!}
                                         @endif
+                                        @if (strpos($tickets_url, "javascript") === 0)
+                                            <button class="buy-ticket">
+                                                @if ($event->button_label !== null && $event->button_label !== '')
+                                                    {{ $event->button_label }}
+                                                @else
+                                                    Купить билет
+                                                @endif
+                                            </button>
+                                        @endif
                                     </div>
                                 </div>
 
