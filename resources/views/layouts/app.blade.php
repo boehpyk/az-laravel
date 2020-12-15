@@ -179,7 +179,7 @@
     </div>
 </nav>
 
-{{--@if (app('request')->input('guest') === 'zarankin')--}}
+@if (app('request')->input('guest') === 'zarankin')
 <section class="announces">
     <div class="container">
         <div class="announce offset-lg-2 col-lg-8 offset-md-1 col-md-10">
@@ -196,7 +196,7 @@
 
     </div>
 </section>
-{{--@endif--}}
+@endif
 
 
 @yield('content')
