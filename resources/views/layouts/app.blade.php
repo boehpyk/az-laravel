@@ -156,7 +156,7 @@
                         C89.3,146.8,91.7,140.5,96.9,137.3z"/>
                 </svg>
             </a>
-            <a class="social-icons__item itunes" target="_blank" href="https://itun.es/ru/eeTJw">
+            <a class="social-icons__item itunes" target="_blank" href="https://band.link/bessimptomno">
                 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 24 26" style="enable-background:new 0 0 24 26;" xml:space="preserve">
                     <path d="M24,1.5V19c0,2.2-3.3,3-5,3s-5-0.8-5-3s3.3-3,5-3c1,0,2.1,0.2,3,0.6V8.2l-12,3.7V23c0,2.2-3.3,3-5,3s-5-0.8-5-3s3.3-3,5-3
