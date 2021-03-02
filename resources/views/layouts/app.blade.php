@@ -57,7 +57,7 @@
                         19.03
                     </div>
                     <div class="place">
-                        Москва, Главклуб
+                        Москва<br />Главклуб
                     </div>
                     <a href="https://glavclub.com/animal-jazz" class="tickets" target="_blank">Билеты</a>
 {{--                                        <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">--}}
@@ -72,7 +72,7 @@
                     <div class="date">26.03</div>
                     <div class="date-sm">26.03</div>
                     <div class="place">
-                        Питер, секретное место
+                        Питер<br />секретное место
                     </div>
                     <a href="http://spb.2021.animaljazz.com/" class="tickets" target="_blank">Билеты</a>
                 </div>
