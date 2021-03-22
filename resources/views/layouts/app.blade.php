@@ -39,46 +39,46 @@
             <img src="{{ asset('assets/az.svg') }}" border="0" alt="Animal ДжаZ logo" class="logo" />
         </div>
 
-        <div class="header-section__concerts">
-            <div class="concerts-title">
-                <div class="title-container">
-                    <div class="time-to-love">
-                        Весенние концерты
-                        <div class="shadow"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="concert-item left">
-                <div class="concert-item-container">
-                    <div class="date">
-                        19.03
-                    </div>
-                    <div class="date-sm">
-                        19.03
-                    </div>
-                    <div class="place">
-                        Москва<br />Главклуб
-                    </div>
-                    <a href="https://glavclub.com/animal-jazz" class="tickets" target="_blank">Билеты</a>
+{{--        <div class="header-section__concerts">--}}
+{{--            <div class="concerts-title">--}}
+{{--                <div class="title-container">--}}
+{{--                    <div class="time-to-love">--}}
+{{--                        Весенние концерты--}}
+{{--                        <div class="shadow"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="concert-item left">--}}
+{{--                <div class="concert-item-container">--}}
+{{--                    <div class="date">--}}
+{{--                        19.03--}}
+{{--                    </div>--}}
+{{--                    <div class="date-sm">--}}
+{{--                        19.03--}}
+{{--                    </div>--}}
+{{--                    <div class="place">--}}
+{{--                        Москва<br />Главклуб--}}
+{{--                    </div>--}}
+{{--                    <a href="https://glavclub.com/animal-jazz" class="tickets" target="_blank">Билеты</a>--}}
 {{--                                        <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">--}}
-                </div>
-                <a href="https://glavclub.com/animal-jazz" target="_blank" class="tickets-sm">Билеты</a>
+{{--                </div>--}}
+{{--                <a href="https://glavclub.com/animal-jazz" target="_blank" class="tickets-sm">Билеты</a>--}}
 {{--                                <script>pnwidget.init({ affiliate: true, hideHeader: true, hideFooter: true, init: { session: '' },customStyle: true });</script> <img src="https://i.imgur.com/IbmGlss.png" width="300" class="tickets-sm" style="cursor: pointer; padding: 0; background: none;" onclick="pnwidget.show({ init:{referral_auth: 'northernsound'}, event:{venue: 'gipsy', date:'22.08.2020', time: '19:00'}, tickets_show: true, exclude_dates: false, customStyle: true, hideHeader: false, closeButton: true})">--}}
-            </div>
-            <div class="space">
-            </div>
-            <div class="concert-item right">
-                <div class="concert-item-container">
-                    <div class="date">26.03</div>
-                    <div class="date-sm">26.03</div>
-                    <div class="place">
-                        Питер<br />секретное место
-                    </div>
-                    <a href="http://spb.2021.animaljazz.com/" class="tickets" target="_blank">Билеты</a>
-                </div>
-                <a href="http://spb.2021.animaljazz.com/" class="tickets-sm" target="_blank">Билеты</a>
-            </div>
-        </div>
+{{--            </div>--}}
+{{--            <div class="space">--}}
+{{--            </div>--}}
+{{--            <div class="concert-item right">--}}
+{{--                <div class="concert-item-container">--}}
+{{--                    <div class="date">26.03</div>--}}
+{{--                    <div class="date-sm">26.03</div>--}}
+{{--                    <div class="place">--}}
+{{--                        Питер<br />секретное место--}}
+{{--                    </div>--}}
+{{--                    <a href="http://spb.2021.animaljazz.com/" class="tickets" target="_blank">Билеты</a>--}}
+{{--                </div>--}}
+{{--                <a href="http://spb.2021.animaljazz.com/" class="tickets-sm" target="_blank">Билеты</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         {{--<section class="header-section__top-links">--}}
         {{--<ul class="top-links__container">--}}
