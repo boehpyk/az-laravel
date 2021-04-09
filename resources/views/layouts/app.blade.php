@@ -30,9 +30,8 @@
 
 <header class="header-section row no-gutters">
     <div class="header-section__container">
-        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/autumn-site/band-photo-narrow.jpg') }}">
-            {{--            <img src="{{ asset('assets/autumn-site/band-photo.jpg') }}" border="0" alt="Animal ДжаZ" />--}}
-            <img src="{{ asset('assets/autumn-site/band-photo-narrow-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
+        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/AJ_2021.jpg') }}">
+            <img src="{{ asset('assets/AJ_2021-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
             <div style="padding-bottom: 40%;"></div>
         </div>
         <div class="header-section__logo">
