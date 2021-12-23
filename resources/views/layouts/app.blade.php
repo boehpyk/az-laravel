@@ -83,7 +83,7 @@
         <ul class="top-links__container">
         <li>
         <a class="top-link" target="_blank" href="https://bnd.lc/raritety" role="listitem" title="Предзаказ альбома «Раритеты»">
-            Предзаказ альбома «Раритеты»
+            Новый альбом «Раритеты»
         </a>
         </li>
         </ul>
