@@ -80,13 +80,13 @@
 {{--        </div>--}}
 
         <section class="header-section__top-links">
-        <ul class="top-links__container">
-        <li>
-        <a class="top-link" target="_blank" href="https://bnd.lc/raritety" role="listitem" title="Предзаказ альбома «Раритеты»">
-            Новый альбом «Раритеты»
-        </a>
-        </li>
-        </ul>
+            <ul class="top-links__container">
+                <li>
+                    <a class="top-link" target="_blank" href="https://forms.gle/7Abqd7nAZdYubWFR6" role="listitem" title="Выбрать песни для Концертов по заявкам">
+                        Выбрать песни для Концертов по заявкам
+                    </a>
+                </li>
+            </ul>
         </section>
 
     </div>
