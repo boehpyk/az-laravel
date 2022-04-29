@@ -79,15 +79,17 @@
 {{--            </div>--}}
 {{--        </div>--}}
 
+        @if ($magicline->is_publish === 'yes')
         <section class="header-section__top-links">
             <ul class="top-links__container">
                 <li>
-                    <a class="top-link" target="_blank" href="https://forms.gle/7Abqd7nAZdYubWFR6" role="listitem" title="Выбрать песни для Концертов по заявкам">
-                        Выбрать песни для Концертов по заявкам
+                    <a class="top-link" target="_blank" href="{{ $magicline->link }}" role="listitem" title="{{ $magicline->text }}">
+                        {{ $magicline->text }}
                     </a>
                 </li>
             </ul>
         </section>
+        @endif
 
     </div>
 </header>

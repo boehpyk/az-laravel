@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Link;
+use App\Magicline;
 use App\TextLink;
 use Illuminate\Http\Request;
 use App\Widget;
@@ -71,7 +72,7 @@ class HomeController extends Controller
 
         $data['seo'] = SEO::get()->first();
 
-
+        $data['magicline'] = Magicline::get()->first();
 
         return view('index', $data);
     }

@@ -72,9 +72,16 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
      */
     Route::get('/seo/edit', 'SEOController@edit')->name('admin_seo_edit');
     Route::post('/seo/edit', 'SEOController@update')->name('admin_seo_update');
-    
 
-    
+    /**
+     * Magic line
+     */
+    Route::get('/magicline/edit', 'MagiclineController@edit')->name('admin_magicline_edit');
+    Route::post('/magicline/edit', 'MagiclineController@update')->name('admin_magicline_update');
+
+
+
+
 });
 
 Route::get('/', 'HomeController@home')->name('index_page');

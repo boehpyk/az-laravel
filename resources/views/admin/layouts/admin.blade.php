@@ -91,6 +91,12 @@
                 <li class="list-group-item"><a href="{{ route('admin_seo_edit') }}">Редактировать SEO</a></li>
             </ul>
 
+            <h4>Строка для важных событий</h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><a href="{{ route('admin_magicline_edit') }}">Редактировать строку для важных событий</a></li>
+            </ul>
+
+
 
         </aside>
         <div class="col-sm-9 mb-5">
