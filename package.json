@@ -33,7 +33,7 @@
     "dependencies": {
         "@chenfengyuan/datepicker": "^1.0.9",
         "material-components-web": "^6.0.0",
-        "minimist": "^1.2.3",
+        "minimist": "^1.2.6",
         "postscribe": "^2.0.8",
         "sass-loader": "^9.0.3"
     }
