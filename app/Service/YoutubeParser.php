@@ -21,7 +21,7 @@ class YoutubeParser
     /**
      * My API key for using Youtube API
      */
-    const API_KEY = 'AIzaSyDXgT_K3a0VNR5HW2UAjj6hWK8pLt6bXpU';
+    const API_KEY = 'AIzaSyCP826cZG9N0gLW1CZALUp846dPIKwNKGs';
 
     public function parse(string $url):array
     {
