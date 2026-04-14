@@ -19,10 +19,6 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
     <meta name="google-site-verification" content="Ba7QtcC04kElBlZdu_JXpY1vJOw-J7WB4iX2XXravvs" />
-
-    <!-- Билеты на 22.08.2020 -->
-    <script type="text/javascript" src="https://ponominalu.ru/widget/static/js/pnwidget_loader.js" charset="UTF-8"></script>
-
 </head>
 
 <body class="justerest-modal mdc-typography">
