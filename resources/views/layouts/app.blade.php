@@ -19,10 +19,6 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
     <meta name="google-site-verification" content="Ba7QtcC04kElBlZdu_JXpY1vJOw-J7WB4iX2XXravvs" />
-
-    <!-- Билеты на 22.08.2020 -->
-    <script type="text/javascript" src="https://ponominalu.ru/widget/static/js/pnwidget_loader.js" charset="UTF-8"></script>
-
 </head>
 
 <body class="justerest-modal mdc-typography">
@@ -30,8 +26,8 @@
 
 <header class="header-section row no-gutters">
     <div class="header-section__container">
-        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/AJ_2021.jpg') }}">
-            <img src="{{ asset('assets/AJ_2021-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
+        <div class="header-section__main-photo placeholder" data-large="{{ asset('assets/AJ_2024.jpg') }}">
+            <img src="{{ asset('assets/AJ_2024-sm.jpg') }}" border="0" alt="Animal ДжаZ" class="img-small" />
             <div style="padding-bottom: 40%;"></div>
         </div>
         <div class="header-section__logo">
