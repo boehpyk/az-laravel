@@ -31,6 +31,22 @@
                         >
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Название</label>
+                    <div class="col-sm-10">
+                        <input
+                                type="text"
+                                name="title"
+                                class="form-control @error('title') is-invalid @enderror"
+                                id="title"
+                                value="{{ old('title') }}"
+                        >
+                        <small class="form-text text-muted">
+                            Можно оставить пустым — название подтянется с YouTube.
+                            Если YouTube с сервера недоступен, введите название вручную.
+                        </small>
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
         </div>

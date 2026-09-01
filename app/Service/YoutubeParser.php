@@ -49,10 +49,13 @@ class YoutubeParser
     }
 
     /**
+     * Pulls the video id out of the URL. Pure string work: no network involved,
+     * so this keeps working where YouTube itself is unreachable.
+     *
      * @param string $url
      * @return string video id
      */
-    private function extractId(string $url):string
+    public function extractId(string $url):string
     {
         preg_match("#(?<=v=)[a-zA-Z0-9_-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);
         if (!$matches or !isset($matches[0])) {

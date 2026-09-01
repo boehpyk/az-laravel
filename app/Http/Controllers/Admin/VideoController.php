@@ -46,18 +46,32 @@ class VideoController extends Controller
     public function store(Request $request, YoutubeParser $parser)
     {
         $request->validate([
-            'url' => 'required'
+            'url'   => 'required',
+            'title' => 'nullable|string|max:255',
         ]);
 
         try {
-            $info = $parser->parse($request->input('url'));
+            $code = $parser->extractId($request->input('url'));
         } catch (UnexpectedValueException $e) {
             return redirect()->back()->withInput()->withErrors(['url' => $e->getMessage()]);
         }
 
+        // The title is looked up automatically only when YouTube is reachable from this
+        // server; where it is not, the admin types it in the form instead.
+        $title = $request->input('title');
+        if (!$title) {
+            try {
+                $title = $parser->parse($request->input('url'))['title'];
+            } catch (UnexpectedValueException $e) {
+                return redirect()->back()->withInput()->withErrors([
+                    'title' => 'Не удалось получить название с YouTube — введите его вручную. (' . $e->getMessage() . ')',
+                ]);
+            }
+        }
+
         $video = new Video();
-        $video->title = $info['title'];
-        $video->code  = $info['code'];
+        $video->title = $title;
+        $video->code  = $code;
 
         $video->save();
 
