@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Video;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\YoutubeParser;
+use UnexpectedValueException;
 
 class VideoController extends Controller
 {
@@ -48,7 +49,11 @@ class VideoController extends Controller
             'url' => 'required'
         ]);
 
-        $info = $parser->parse($request->input('url'));
+        try {
+            $info = $parser->parse($request->input('url'));
+        } catch (UnexpectedValueException $e) {
+            return redirect()->back()->withInput()->withErrors(['url' => $e->getMessage()]);
+        }
 
         $video = new Video();
         $video->title = $info['title'];

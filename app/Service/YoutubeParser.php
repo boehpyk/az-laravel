@@ -1,7 +1,8 @@
 <?php
 /**
- * Class that makes cover images for the Event.
- * Cover file can be uploaded or generated (if not exists)
+ * Resolves a YouTube URL to the video code and title.
+ * Uses the YouTube Data API when an API key is configured,
+ * otherwise falls back to the keyless oEmbed endpoint.
  * User: programmer
  * Date: 16/06/2019
  * Time: 14:12
@@ -9,42 +10,121 @@
 
 namespace App\Service;
 
-use http\Exception\UnexpectedValueException;
+use UnexpectedValueException;
 
 class YoutubeParser
 {
     /**
-     * URL to get Ypoutube video information
+     * URL to get Youtube video information
      */
     const API_URL = 'https://www.googleapis.com/youtube/v3/videos';
 
     /**
-     * My API key for using Youtube API
+     * Keyless endpoint that returns the title of a public video
      */
-    const API_KEY = 'AIzaSyCP826cZG9N0gLW1CZALUp846dPIKwNKGs';
+    const OEMBED_URL = 'https://www.youtube.com/oembed';
 
     public function parse(string $url):array
     {
-        $result = [];
+        $video_id = $this->extractId($url);
 
-        preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);
+        $title = $this->titleFromApi($video_id);
+        if ($title === null) {
+            $title = $this->titleFromOembed($video_id);
+        }
+
+        if ($title === null) {
+            throw new UnexpectedValueException(
+                'Не удалось получить информацию о видео с YouTube. Проверьте ссылку и доступность видео.'
+            );
+        }
+
+        return [
+            'code'  => $video_id,
+            'title' => $title,
+        ];
+    }
+
+    /**
+     * @param string $url
+     * @return string video id
+     */
+    private function extractId(string $url):string
+    {
+        preg_match("#(?<=v=)[a-zA-Z0-9_-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);
         if (!$matches or !isset($matches[0])) {
             throw new UnexpectedValueException('Cannot find video using given URL');
         }
-        $video_id = $matches[0];
 
-        $curl = curl_init(self::API_URL . '?id=' . $video_id . '&key=' . self::API_KEY . '&part=snippet');
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => 1
-        ]);
-        $resp = curl_exec($curl);
-        curl_close($curl);
+        // strip a trailing query string, e.g. youtu.be/ID?si=...
+        $video_id = preg_split('/[?&#]/', $matches[0])[0];
+
+        if ($video_id === '') {
+            throw new UnexpectedValueException('Cannot find video using given URL');
+        }
+
+        return $video_id;
+    }
+
+    /**
+     * @param string $video_id
+     * @return string|null title, or null when the API is unusable
+     */
+    private function titleFromApi(string $video_id)
+    {
+        $key = config('services.youtube.key');
+        if (!$key) {
+            return null;
+        }
+
+        $resp = $this->get(self::API_URL . '?' . http_build_query([
+            'id'   => $video_id,
+            'key'  => $key,
+            'part' => 'snippet',
+        ]));
 
         $arr = json_decode($resp, true);
 
-        $result['code'] = $video_id;
-        $result['title'] = $arr['items'][0]['snippet']['title'];
+        return $arr['items'][0]['snippet']['title'] ?? null;
+    }
 
-        return $result;
+    /**
+     * @param string $video_id
+     * @return string|null title, or null when the video is not public
+     */
+    private function titleFromOembed(string $video_id)
+    {
+        $resp = $this->get(self::OEMBED_URL . '?' . http_build_query([
+            'url'    => 'https://www.youtube.com/watch?v=' . $video_id,
+            'format' => 'json',
+        ]));
+
+        $arr = json_decode($resp, true);
+
+        return $arr['title'] ?? null;
+    }
+
+    /**
+     * @param string $url
+     * @return string response body, empty string on a failed request
+     */
+    private function get(string $url):string
+    {
+        $curl = curl_init($url);
+        curl_setopt_array($curl, [
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_FOLLOWLOCATION => 1,
+            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_TIMEOUT        => 10,
+        ]);
+        $resp = curl_exec($curl);
+        $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if ($resp === false or $code < 200 or $code >= 300) {
+            return '';
+        }
+
+        return $resp;
     }
 }
