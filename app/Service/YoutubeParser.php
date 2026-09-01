@@ -10,6 +10,7 @@
 
 namespace App\Service;
 
+use Illuminate\Support\Facades\Log;
 use UnexpectedValueException;
 
 class YoutubeParser
@@ -34,9 +35,11 @@ class YoutubeParser
         }
 
         if ($title === null) {
-            throw new UnexpectedValueException(
-                'Не удалось получить информацию о видео с YouTube. Проверьте ссылку и доступность видео.'
-            );
+            $message = 'Не удалось получить информацию о видео с YouTube. Проверьте ссылку и доступность видео.';
+            if ($this->last_error) {
+                $message .= ' (' . $this->last_error . ')';
+            }
+            throw new UnexpectedValueException($message);
         }
 
         return [
@@ -105,11 +108,24 @@ class YoutubeParser
     }
 
     /**
+     * The reason the last failed request failed, for the log and the admin message.
+     *
+     * @var string|null
+     */
+    private $last_error;
+
+    /**
      * @param string $url
      * @return string response body, empty string on a failed request
      */
     private function get(string $url):string
     {
+        if (!function_exists('curl_init')) {
+            $this->last_error = 'ext-curl is not installed';
+            Log::warning('YoutubeParser: ' . $this->last_error);
+            return '';
+        }
+
         $curl = curl_init($url);
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => 1,
@@ -119,12 +135,22 @@ class YoutubeParser
         ]);
         $resp = curl_exec($curl);
         $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        $err  = curl_error($curl);
         curl_close($curl);
 
-        if ($resp === false or $code < 200 or $code >= 300) {
-            return '';
+        if ($resp === false or $err) {
+            $this->last_error = 'curl error: ' . ($err ?: 'unknown');
+        } elseif ($code < 200 or $code >= 300) {
+            $this->last_error = 'HTTP ' . $code . ': ' . mb_substr((string) $resp, 0, 300);
+        } else {
+            return $resp;
         }
 
-        return $resp;
+        Log::warning('YoutubeParser request failed', [
+            'url'   => preg_replace('/key=[^&]+/', 'key=***', $url),
+            'error' => $this->last_error,
+        ]);
+
+        return '';
     }
 }
